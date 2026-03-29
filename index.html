@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>roas.rye — We Build Attention</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Accent Color Picker -->
+  <div class="color-picker-panel" id="colorPanel">
+    <div class="color-panel-toggle" id="colorToggle">
+      <span class="toggle-icon">◈</span>
+      <span class="toggle-label">ACCENT</span>
+    </div>
+    <div class="color-options" id="colorOptions">
+      <div class="color-swatch active" data-color="#00FFB2" data-name="Mint" style="background:#00FFB2"></div>
+      <div class="color-swatch" data-color="#FF6B35" data-name="Ember" style="background:#FF6B35"></div>
+      <div class="color-swatch" data-color="#A855F7" data-name="Violet" style="background:#A855F7"></div>
+      <div class="color-swatch" data-color="#FACC15" data-name="Gold" style="background:#FACC15"></div>
+      <div class="color-swatch" data-color="#38BDF8" data-name="Ice" style="background:#38BDF8"></div>
+      <div class="color-swatch" data-color="#FF3366" data-name="Rose" style="background:#FF3366"></div>
+      <input type="color" id="customColor" class="custom-color-input" title="Custom color" />
+      <label for="customColor" class="custom-color-label">+</label>
+    </div>
+    <div class="color-name-display" id="colorName">Mint</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav glass-nav" id="nav">
+    <div class="nav-logo" contenteditable="true" spellcheck="false">roas.rye</div>
+    <div class="nav-links">
+      <a href="#work" class="nav-link" contenteditable="true" spellcheck="false">Work</a>
+      <a href="#approach" class="nav-link" contenteditable="true" spellcheck="false">Approach</a>
+      <a href="#services" class="nav-link" contenteditable="true" spellcheck="false">Services</a>
+      <a href="#contact" class="nav-link cta-link" contenteditable="true" spellcheck="false">Start a Project</a>
+    </div>
+    <div class="nav-hint">✦ click any text to edit</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="noise-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow glass-tag" contenteditable="true" spellcheck="false">Web Design & Development Studio</div>
+      <h1 class="hero-title">
+        <span class="line" contenteditable="true" spellcheck="false">We Build</span>
+        <span class="line accent-text" contenteditable="true" spellcheck="false">Attention.</span>
+      </h1>
+      <p class="hero-sub" contenteditable="true" spellcheck="false">
+        roas.rye crafts fully functional websites that capture viewers at first scroll — and refuse to let go.
+      </p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn-primary glass-btn" contenteditable="false">
+          <span contenteditable="true" spellcheck="false">See Our Work</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn-ghost" contenteditable="false">
+          <span contenteditable="true" spellcheck="false">Get a Free Audit</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat glass-card">
+          <span class="stat-num" contenteditable="true" spellcheck="false">340%</span>
+          <span class="stat-label" contenteditable="true" spellcheck="false">Avg. Engagement Lift</span>
+        </div>
+        <div class="stat glass-card">
+          <span class="stat-num" contenteditable="true" spellcheck="false">2.4s</span>
+          <span class="stat-label" contenteditable="true" spellcheck="false">Avg. Load Time</span>
+        </div>
+        <div class="stat glass-card">
+          <span class="stat-num" contenteditable="true" spellcheck="false">98+</span>
+          <span class="stat-label" contenteditable="true" spellcheck="false">Lighthouse Score</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span contenteditable="true" spellcheck="false">scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+    <!-- Easter Egg 1: Hidden in hero -->
+    <div class="easter-egg ee-1" id="ee1" title="🥚 Easter Egg #1 Found! You're curious. We like that.">⬡</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <span contenteditable="true" spellcheck="false">Scroll-Triggered Animations</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Liquid Glass UI</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Conversion-First Design</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Lead Generation Systems</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Interactive Storytelling</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Performance Obsessed</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Scroll-Triggered Animations</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Liquid Glass UI</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Conversion-First Design</span> <span class="marquee-dot accent-text">✦</span>
+      <span contenteditable="true" spellcheck="false">Lead Generation Systems</span> <span class="marquee-dot accent-text">✦</span>
+    </div>
+  </div>
+
+  <!-- SCROLLYTELLING: APPROACH -->
+  <section class="scrolly-section" id="approach">
+    <div class="scrolly-sticky">
+      <div class="scrolly-visual" id="scrollyVisual">
+        <div class="scrolly-frame frame-1 active" id="frame1">
+          <div class="frame-bg"></div>
+          <div class="frame-icon">⚡</div>
+          <div class="frame-particles" id="particles1"></div>
+        </div>
+        <div class="scrolly-frame frame-2" id="frame2">
+          <div class="frame-bg"></div>
+          <div class="frame-icon">🎯</div>
+        </div>
+        <div class="scrolly-frame frame-3" id="frame3">
+          <div class="frame-bg"></div>
+          <div class="frame-icon">🚀</div>
+        </div>
+        <div class="scrolly-frame frame-4" id="frame4">
+          <div class="frame-bg"></div>
+          <div class="frame-icon">💎</div>
+        </div>
+        <!-- Easter Egg 2: hidden in visual panel -->
+        <div class="easter-egg ee-2 ee-visual" id="ee2" title="🥚 Easter Egg #2! Most people never look here.">✧</div>
+      </div>
+    </div>
+
+    <div class="scrolly-steps">
+      <div class="scrolly-step" data-step="1">
+        <div class="step-glass glass-card">
+          <div class="step-num accent-text">01</div>
+          <h2 class="step-title" contenteditable="true" spellcheck="false">We Hook Them in 3 Seconds</h2>
+          <p class="step-body" contenteditable="true" spellcheck="false">
+            Attention is the scarcest resource online. Every site we build opens with an unmissable moment — kinetic type, scroll-triggered reveals, or liquid motion that makes visitors stop mid-thumb.
+          </p>
+          <div class="step-tag glass-tag" contenteditable="true" spellcheck="false">First Impression Engineering</div>
+        </div>
+      </div>
+      <div class="scrolly-step" data-step="2">
+        <div class="step-glass glass-card">
+          <div class="step-num accent-text">02</div>
+          <h2 class="step-title" contenteditable="true" spellcheck="false">We Keep Them Scrolling</h2>
+          <p class="step-body" contenteditable="true" spellcheck="false">
+            Our scrollytelling architecture turns a page into a narrative. Visitors don't read — they experience. Every scroll is a micro-reward that pulls them deeper into your funnel.
+          </p>
+          <div class="step-tag glass-tag" contenteditable="true" spellcheck="false">Narrative Architecture</div>
+        </div>
+      </div>
+      <div class="scrolly-step" data-step="3">
+        <div class="step-glass glass-card">
+          <div class="step-num accent-text">03</div>
+          <h2 class="step-title" contenteditable="true" spellcheck="false">We Convert the Curious</h2>
+          <p class="step-body" contenteditable="true" spellcheck="false">
+            Beautiful isn't enough. Every interaction, CTA, and layout decision is engineered to move visitors toward a single outcome: becoming your customer.
+          </p>
+          <div class="step-tag glass-tag" contenteditable="true" spellcheck="false">Conversion Architecture</div>
+        </div>
+      </div>
+      <div class="scrolly-step" data-step="4">
+        <div class="step-glass glass-card">
+          <div class="step-num accent-text">04</div>
+          <h2 class="step-title" contenteditable="true" spellcheck="false">We Deliver — and Disappear</h2>
+          <p class="step-body" contenteditable="true" spellcheck="false">
+            We ship fast, hand off clean, and make you look like the genius who found us. No bloated retainers, no agency theatre. Just results you can measure in your ROAS.
+          </p>
+          <div class="step-tag glass-tag" contenteditable="true" spellcheck="false">Radical Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section class="work-section" id="work">
+    <div class="section-header">
+      <span class="section-eyebrow accent-text" contenteditable="true" spellcheck="false">Selected Work</span>
+      <h2 class="section-title" contenteditable="true" spellcheck="false">Proof, Not Promises.</h2>
+    </div>
+    <div class="work-grid" id="workGrid">
+
+      <div class="work-card glass-card reveal-card" data-tilt>
+        <div class="card-media" style="--card-hue: 160deg;">
+          <div class="card-mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-content">
+              <div class="mockup-line accent-bg" style="width:60%"></div>
+              <div class="mockup-line" style="width:90%"></div>
+              <div class="mockup-line" style="width:75%"></div>
+              <div class="mockup-btn accent-bg"></div>
+            </div>
+          </div>
+          <div class="card-hover-overlay">
+            <span class="view-label">View Case Study →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag" contenteditable="true" spellcheck="false">E-commerce</span>
+            <span class="tag" contenteditable="true" spellcheck="false">Scrollytelling</span>
+          </div>
+          <h3 class="card-title" contenteditable="true" spellcheck="false">Horizon Beauty Co.</h3>
+          <p class="card-desc" contenteditable="true" spellcheck="false">Rebuilt their DTC store with kinetic product reveals. Bounce rate dropped 60%, add-to-cart tripled.</p>
+          <div class="card-metric">
+            <span class="metric-num accent-text" contenteditable="true" spellcheck="false">+312%</span>
+            <span class="metric-label" contenteditable="true" spellcheck="false">Revenue</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card glass-card reveal-card" data-tilt>
+        <div class="card-media" style="--card-hue: 200deg;">
+          <div class="card-mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-content">
+              <div class="mockup-circle accent-bg"></div>
+              <div class="mockup-line" style="width:80%"></div>
+              <div class="mockup-line" style="width:65%"></div>
+              <div class="mockup-line accent-bg" style="width:40%"></div>
+            </div>
+          </div>
+          <div class="card-hover-overlay">
+            <span class="view-label">View Case Study →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag" contenteditable="true" spellcheck="false">SaaS</span>
+            <span class="tag" contenteditable="true" spellcheck="false">Lead Gen</span>
+          </div>
+          <h3 class="card-title" contenteditable="true" spellcheck="false">Vaultly Analytics</h3>
+          <p class="card-desc" contenteditable="true" spellcheck="false">Full-funnel marketing site with interactive ROI calculator and gated demo system.</p>
+          <div class="card-metric">
+            <span class="metric-num accent-text" contenteditable="true" spellcheck="false">+189%</span>
+            <span class="metric-label" contenteditable="true" spellcheck="false">Qualified Leads</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-card glass-card reveal-card" data-tilt>
+        <div class="card-media" style="--card-hue: 280deg;">
+          <div class="card-mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-content">
+              <div class="mockup-grid">
+                <div class="mockup-cell accent-bg"></div>
+                <div class="mockup-cell"></div>
+                <div class="mockup-cell"></div>
+                <div class="mockup-cell accent-bg"></div>
+              </div>
+              <div class="mockup-line" style="width:85%"></div>
+            </div>
+          </div>
+          <div class="card-hover-overlay">
+            <span class="view-label">View Case Study →</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-tags">
+            <span class="tag" contenteditable="true" spellcheck="false">Agency</span>
+            <span class="tag" contenteditable="true" spellcheck="false">Portfolio</span>
+          </div>
+          <h3 class="card-title" contenteditable="true" spellcheck="false">Studio Nero</h3>
+          <p class="card-desc" contenteditable="true" spellcheck="false">Award-winning portfolio site with WebGL transitions and a proposal booking engine.</p>
+          <div class="card-metric">
+            <span class="metric-num accent-text" contenteditable="true" spellcheck="false">+540%</span>
+            <span class="metric-label" contenteditable="true" spellcheck="false">Inbound Proposals</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Easter Egg 3: click the section title multiple times -->
+    <div class="ee-hint hidden" id="eeHint3">🥚 Easter Egg #3 unlocked! You clicked the title 5 times. Persistence pays off — just like great web design.</div>
+  </section>
+
+  <!-- SERVICES / FLOATING CARDS -->
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <span class="section-eyebrow accent-text" contenteditable="true" spellcheck="false">What We Build</span>
+      <h2 class="section-title" contenteditable="true" spellcheck="false">Full-Stack Attention Systems.</h2>
+      <p class="section-sub" contenteditable="true" spellcheck="false">Every deliverable is designed to generate attention, hold it, and convert it.</p>
+    </div>
+
+    <div class="services-float-grid" id="servicesGrid">
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">⚡</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">Landing Pages</h4>
+          <p contenteditable="true" spellcheck="false">High-converting single pages that do one job perfectly.</p>
+        </div>
+      </div>
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">🎬</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">Scrollytelling Sites</h4>
+          <p contenteditable="true" spellcheck="false">Narrative-driven experiences that guide visitors to your CTA.</p>
+        </div>
+      </div>
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">🛒</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">E-commerce Stores</h4>
+          <p contenteditable="true" spellcheck="false">Product-first stores engineered to maximize cart value.</p>
+        </div>
+      </div>
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">📊</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">SaaS Marketing Sites</h4>
+          <p contenteditable="true" spellcheck="false">Funnel-first architecture that fills your pipeline.</p>
+        </div>
+      </div>
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">🔌</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">Web App UI</h4>
+          <p contenteditable="true" spellcheck="false">Interfaces so intuitive users never need a tutorial.</p>
+        </div>
+      </div>
+      <div class="service-pill glass-card reveal-card">
+        <span class="service-icon">📈</span>
+        <div>
+          <h4 contenteditable="true" spellcheck="false">Performance Audits</h4>
+          <p contenteditable="true" spellcheck="false">We dissect what's leaking and fix the conversion gaps.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive ROI Calculator -->
+    <div class="roi-calc glass-card reveal-card" id="roiCalc">
+      <div class="roi-header">
+        <span class="roi-icon accent-text">◈</span>
+        <h3 contenteditable="true" spellcheck="false">Estimate Your ROI</h3>
+        <p contenteditable="true" spellcheck="false">See what a better website could mean for your business.</p>
+      </div>
+      <div class="roi-inputs">
+        <div class="roi-field">
+          <label contenteditable="true" spellcheck="false">Monthly Visitors</label>
+          <input type="range" id="visitorsSlider" min="500" max="100000" step="500" value="10000" />
+          <span class="slider-val" id="visitorsVal">10,000</span>
+        </div>
+        <div class="roi-field">
+          <label contenteditable="true" spellcheck="false">Current Conversion Rate (%)</label>
+          <input type="range" id="convSlider" min="0.5" max="10" step="0.1" value="2" />
+          <span class="slider-val" id="convVal">2.0%</span>
+        </div>
+        <div class="roi-field">
+          <label contenteditable="true" spellcheck="false">Average Order Value ($)</label>
+          <input type="range" id="aovSlider" min="10" max="5000" step="10" value="150" />
+          <span class="slider-val" id="aovVal">$150</span>
+        </div>
+      </div>
+      <div class="roi-results glass-card">
+        <div class="roi-result-col">
+          <span class="roi-label" contenteditable="true" spellcheck="false">Current Monthly Revenue</span>
+          <span class="roi-num" id="currentRev">$30,000</span>
+        </div>
+        <div class="roi-divider accent-text">→</div>
+        <div class="roi-result-col highlight">
+          <span class="roi-label" contenteditable="true" spellcheck="false">With roas.rye (+200% Conv.)</span>
+          <span class="roi-num accent-text" id="projectedRev">$90,000</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section reveal-section">
+    <div class="section-header">
+      <span class="section-eyebrow accent-text" contenteditable="true" spellcheck="false">Client Results</span>
+      <h2 class="section-title" contenteditable="true" spellcheck="false">They Trusted Us. Here's What Happened.</h2>
+    </div>
+
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial glass-card">
+        <div class="testi-quote accent-text">"</div>
+        <p class="testi-body" contenteditable="true" spellcheck="false">roas.rye didn't just build a website — they built a customer acquisition machine. Our ROAS went from 1.8x to 6.2x within 90 days of launch.</p>
+        <div class="testi-author">
+          <div class="testi-avatar accent-bg">MK</div>
+          <div>
+            <strong contenteditable="true" spellcheck="false">Maya Kowalski</strong>
+            <span contenteditable="true" spellcheck="false">CEO, Horizon Beauty Co.</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial glass-card">
+        <div class="testi-quote accent-text">"</div>
+        <p class="testi-body" contenteditable="true" spellcheck="false">We'd been through three agencies. roas.rye was different from the first call. No fluff, no decks — just results. Our pipeline hasn't been this full in 5 years.</p>
+        <div class="testi-author">
+          <div class="testi-avatar accent-bg">JR</div>
+          <div>
+            <strong contenteditable="true" spellcheck="false">James Reeves</strong>
+            <span contenteditable="true" spellcheck="false">CRO, Vaultly Analytics</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial glass-card">
+        <div class="testi-quote accent-text">"</div>
+        <p class="testi-body" contenteditable="true" spellcheck="false">The scrollytelling experience they built for us has become a conversation piece at every pitch. Clients ask us who built our website before they ask about our services.</p>
+        <div class="testi-author">
+          <div class="testi-avatar accent-bg">SA</div>
+          <div>
+            <strong contenteditable="true" spellcheck="false">Sofia Andrade</strong>
+            <span contenteditable="true" spellcheck="false">Director, Studio Nero</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-nav">
+      <button class="testi-btn" id="testiPrev" aria-label="Previous">←</button>
+      <div class="testi-dots" id="testiDots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <button class="testi-btn" id="testiNext" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <!-- THE BIG CTA / CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-bg">
+      <div class="orb orb-4"></div>
+      <div class="orb orb-5"></div>
+    </div>
+    <div class="contact-content glass-card reveal-card">
+      <div class="contact-badge glass-tag" contenteditable="true" spellcheck="false">Limited spots — Q3 2025</div>
+      <h2 class="contact-title" contenteditable="true" spellcheck="false">Ready to Stop Leaking Attention?</h2>
+      <p class="contact-sub" contenteditable="true" spellcheck="false">Tell us about your project. We'll reply within 24 hours with a free conversion audit and a no-pressure proposal.</p>
+
+      <form class="contact-form" id="contactForm" onsubmit="return handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nameField">Your Name</label>
+            <input type="text" id="nameField" placeholder="Alex Rivera" />
+          </div>
+          <div class="form-field">
+            <label for="emailField">Email</label>
+            <input type="email" id="emailField" placeholder="alex@company.com" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="projectField">Tell us about your project</label>
+          <textarea id="projectField" rows="4" placeholder="We're a SaaS company with 5k monthly visitors and a 1% conversion rate. We want to fix that..."></textarea>
+        </div>
+        <div class="form-field budget-field">
+          <label>Project Budget</label>
+          <div class="budget-pills">
+            <button type="button" class="budget-pill" data-budget="under5k" contenteditable="true" spellcheck="false">Under $5k</button>
+            <button type="button" class="budget-pill" data-budget="5to15" contenteditable="true" spellcheck="false">$5k – $15k</button>
+            <button type="button" class="budget-pill active" data-budget="15to30" contenteditable="true" spellcheck="false">$15k – $30k</button>
+            <button type="button" class="budget-pill" data-budget="30plus" contenteditable="true" spellcheck="false">$30k+</button>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary glass-btn submit-btn">
+          <span>Send My Project Brief</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+      <div class="form-success hidden" id="formSuccess">
+        <span class="success-icon accent-text">✦</span>
+        <p contenteditable="true" spellcheck="false">Got it! We'll review your brief and be in touch within 24 hours. Watch your inbox.</p>
+      </div>
+    </div>
+    <!-- Easter Egg 4: hidden in contact bg -->
+    <div class="easter-egg ee-4" id="ee4" title="🥚 Easter Egg #4! You're exactly the kind of thorough person we love working with.">⊕</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo accent-text" contenteditable="true" spellcheck="false">roas.rye</div>
+        <p contenteditable="true" spellcheck="false">We design and build fully functional websites that focus on capturing viewers' attention — and keeping it.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link glass-tag" contenteditable="true" spellcheck="false">Twitter</a>
+          <a href="#" class="social-link glass-tag" contenteditable="true" spellcheck="false">LinkedIn</a>
+          <a href="#" class="social-link glass-tag" contenteditable="true" spellcheck="false">Dribbble</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 contenteditable="true" spellcheck="false">Services</h5>
+        <a href="#" contenteditable="true" spellcheck="false">Landing Pages</a>
+        <a href="#" contenteditable="true" spellcheck="false">Scrollytelling</a>
+        <a href="#" contenteditable="true" spellcheck="false">E-commerce</a>
+        <a href="#" contenteditable="true" spellcheck="false">SaaS Sites</a>
+        <a href="#" contenteditable="true" spellcheck="false">Audits</a>
+      </div>
+      <div class="footer-col">
+        <h5 contenteditable="true" spellcheck="false">Company</h5>
+        <a href="#" contenteditable="true" spellcheck="false">About</a>
+        <a href="#" contenteditable="true" spellcheck="false">Work</a>
+        <a href="#" contenteditable="true" spellcheck="false">Process</a>
+        <a href="#" contenteditable="true" spellcheck="false">Blog</a>
+        <a href="#" contenteditable="true" spellcheck="false">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5 contenteditable="true" spellcheck="false">Legal</h5>
+        <a href="#" contenteditable="true" spellcheck="false">Privacy</a>
+        <a href="#" contenteditable="true" spellcheck="false">Terms</a>
+        <a href="#" contenteditable="true" spellcheck="false">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span contenteditable="true" spellcheck="false">© 2025 roas.rye. All rights reserved.</span>
+      <span class="easter-egg-counter">Easter Eggs found: <span id="eeCount">0</span>/5 <span class="ee-find-hint">keep exploring ↑</span></span>
+    </div>
+    <!-- Easter Egg 5: in footer bottom, hidden -->
+    <div class="easter-egg ee-5" id="ee5" title="🥚 FINAL Easter Egg! You found them all. Email us 'I found all 5' for a 15% discount!">★</div>
+  </footer>
+
+  <!-- Easter Egg Toast -->
+  <div class="ee-toast" id="eeToast"></div>
+
+  <!-- Konami Code Easter Egg overlay -->
+  <div class="konami-overlay hidden" id="konamiOverlay">
+    <div class="konami-content glass-card">
+      <div class="konami-icon">🎮</div>
+      <h3>CHEAT CODE ACTIVATED</h3>
+      <p>You entered the Konami Code. Respect. Here's a secret: the best websites aren't just built — they're engineered. That's what we do.</p>
+      <button class="btn-primary glass-btn" onclick="document.getElementById('konamiOverlay').classList.add('hidden')">
+        <span>Nice. Close this.</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
